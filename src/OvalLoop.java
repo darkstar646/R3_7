@@ -85,8 +85,10 @@ public class OvalLoop extends MyFrame2{
 		for(int i=1; i<n+1; i++){
 			double cos=Math.cos(Math.toRadians(i*s));
 			double sin=Math.sin(Math.toRadians(i*s));
-			double loc_x=cos*(r_1+r_2)+x+(r_1-r_2);
-			double loc_y=sin*(r_1+r_2)+y+(r_1-r_2);
+			double loc_x=cos*(r_1+r_2)+(x+r_1-r_2);		
+			double loc_y=sin*(r_1+r_2)+(y+r_1-r_2);
+			//cos*(r_1+r_2)が大きい円の中心から小さい円の中心までの距離をx方向に投影した値、
+
 			
 			fillOval(loc_x,loc_y,r_2*2,r_2*2);
 			System.out.println(""+cos);
